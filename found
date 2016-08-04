@@ -14,11 +14,11 @@ def open_file(filepath):
 
 
 def copy_to_xclip(filepath):
-    system('echo -n %s | xclip' % filepath)
+    system('echo -n %s | xclip -selection c' % filepath)
 
 
 def copy_to_xsel(filepath):
-    system('echo -n %s | xsel' % filepath)
+    system('echo -n %s | xsel -b' % filepath)
 
 
 def write_path(filepath):
