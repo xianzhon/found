@@ -66,7 +66,12 @@ def select_item(items, action):
         action(items[0])
     else:
         show_candidates(items)
-        item_no = int(raw_input("\nChoose one file to open: "))
+        if action == copy_to_xsel or action == copy_to_xclip:
+            item_no = int(raw_input("\nChoose one file to copy path: "))
+        elif action == write_path:
+            item_no = int(raw_input("\nChoose one file to save path: "))
+        else:
+            item_no = int(raw_input("\nChoose one file to open: "))
         action(items[item_no - 1])
 
 
