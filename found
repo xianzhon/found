@@ -10,7 +10,7 @@ import sys
 
 
 def open_file(filepath):
-    call(['xdg-open', filepath])
+    call(['gnome-open', filepath])
 
 
 def copy_to_xclip(filepath):
